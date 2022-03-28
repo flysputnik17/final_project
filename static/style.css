@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
+
+body {
+  overflow-x: hidden;
+  font-family: "Lato", sans-serif;
+  color: #505962;
+}
+
+/*--navbar--*/
+
+.navbar {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  background: rgba(0, 0, 0, 0.6) !important;
+}
+
+.navbar-brand img {
+  height: 2rem;
+}
+
+.navbar-nav li {
+  padding-right: 0.7rem;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(3, 3, 3);
+  padding-top: 0.8rem;
+}
+.navbar-light .navbar-nav .nav-link .active,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: slategray;
+}
+
+/*--slider--*/
+
+.carousel-item {
+  background-size: cover;
+  background-position: center;
+  /* height: 92.7vh; */
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 38%;
+  color: #000;
+}
+
+.demo {
+  padding: 0px 0;
+}
+.heading-title {
+  margin-bottom: 50px;
+}
+.pricingTable {
+  border: 1px solid #dbdbdb;
+  box-shadow: 0 0 10px #5c5959;
+  text-align: center;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.pricingTable:hover {
+  border: 2px solid #5e5a5a;
+  margin-top: -30px;
+}
+
+.pricingTable .pricingTable-header {
+  padding: 30px 10px;
+}
+
+.pricingTable .heading {
+  display: block;
+  color: #000;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 21px;
+}
+
+.pricingTable .pricing-plans {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #d0d0d0;
+  color: #000;
+  font-weight: 900;
+}
+
+.pricingTable .price-value {
+  color: #474747;
+  display: block;
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 35px;
+  padding: 0 10px;
+}
+
+.pricingTable .price-value span {
+  font-size: 50px;
+}
+
+.pricingTable .subtitle {
+  color: #82919f;
+  display: block;
+  font-size: 15px;
+  margin-top: 15px;
+  font-weight: 100;
+}
+
+.pricingTable .pricingContent ul {
+  padding: 0;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.pricingTable .pricingContent ul li {
+  padding: 20px 0;
+}
+
+.pricingTable .pricingContent ul li:nth-child(odd) {
+  background-color: #fff;
+}
+
+.pricingTable .pricingContent ul li:last-child {
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.pricingTable .pricingTable-sign-up {
+  padding: 25px 0;
+}
+
+.pricingTable .btn-block {
+  width: 50%;
+  margin: 0 auto;
+  background: #5c5959;
+  border: 1px solid transparent;
+  padding: 10px 5px;
+  color: #fff;
+  text-transform: capitalize;
+  border-radius: 5px;
+  transition: 0.3s ease;
+  box-shadow: 1px 2px 50px 0px rgba(88, 78, 78, 0.986);
+  display: inline;
+}
+
+.pricingTable .btn-block:after {
+  content: "\f090";
+  font-family: "FontAwesome";
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.pricingTable:hover .btn-block {
+  background: #fff;
+  color: #070707;
+  border: 1px solid #070707;
+}
+
+@media screen and (max-width: 990px) {
+  .pricingTable {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pricingTable {
+    margin: 0 0 30px 0;
+  }
+}
+
+.cover {
+  height: 55vmin;
+}
+
+.cover .content {
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+  padding-top: 19vmin;
+}
+
+.cover .content > h1 {
+  font-family: var(--Patua);
+  font-size: 6vmin;
+  color: whitesmoke;
+}
+
+.cover .content > p {
+  font-family: var(--Rubik);
+  font-size: 2vmin;
+  color: #e5e5e5;
+}
+
+.numbers .rect {
+  position: relative;
+  z-index: 1;
+  background: white;
+  width: 17rem;
+  height: 12rem;
+  padding-top: 3.5vmin;
+  margin: 1rem;
+  border-radius: 0.5em;
+  box-shadow: 1px 2px 50px 0px rgba(71, 64, 66, 0.986);
+}
+
+.numbers {
+  margin-top: -15vmin;
+}
+
+.numbers .rect h1 {
+  font-size: 5rem;
+  color: #5c5959;
+}
+
+.numbers .rect p {
+  font-family: var(--Rubik);
+}
+
+@media screen and (max-width: 990px) {
+  .container-fluid {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container-fluid {
+    margin: 0 0 30px 0;
+  }
+}
+
+.purchase > h1 {
+  padding-top: 15vmin;
+  padding-bottom: 0.1em;
+  font-family: var(--Lobster);
+}
+
+.purchase > p {
+  color: var(--light-black);
+  padding-bottom: 10vmin;
+}
+
+.purchase .cards .card {
+  width: 22rem;
+  margin: 3vmin;
+}
+
+.cards div {
+  padding: 0;
+  margin: 0;
+}
+.cards .title {
+  background: rgba(208, 241, 241, 0.199);
+  padding: 1.4rem 2.5rem;
+  font-size: 2vmin;
+}
+
+.card .card-text {
+  padding: 2.5rem 3rem;
+  color: var(--light-black);
+}
+
+.card-body .pricing {
+  background: rgba(208, 241, 241, 0.199);
+  border-top-right-radius: 170px;
+  border-top-left-radius: 170px;
+}
+
+.card-body .pricing > h1 {
+  font-size: 10vmin;
+  padding: 1em 0.5em;
+}
+
+.section-3 {
+  width: 100%;
+  height: 55vmin;
+
+  position: relative;
+}
+
+.section-3 {
+  background: rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+.section-3 .content > h1 {
+  color: whitesmoke;
+  padding: 0.7rem;
+}
+
+.section-4 {
+  padding: 50px 0;
+  color: #f0f9ff;
+  background-color: #282d32;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.section-4 h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.section-4 ul {
+  padding: 0;
+  list-style: none;
+  line-height: 1.6;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.section-4 ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.section-4 ul a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 767px) {
+  .section-4 .item:not(.social) {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+
+.section-4.item.text {
+  margin-bottom: 36px;
+}
+
+@media (max-width: 767px) {
+  .section-4 .item.text {
+    margin-bottom: 0;
+  }
+}
+
+.fsection-4 .item.text p {
+  opacity: 0.6;
+  margin-bottom: 0;
+}
+
+.section-4 .item.social {
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .section-4 .item.social {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+.section-4 .item.social > a {
+  font-size: 20px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 8px;
+  color: #fff;
+  opacity: 0.75;
+}
+
+.section-4 .item.social > a:hover {
+  opacity: 0.9;
+}
+
+.section-4 .copyright {
+  text-align: center;
+  padding-top: 24px;
+  opacity: 0.3;
+  font-size: 13px;
+  margin-bottom: 0;
+}
