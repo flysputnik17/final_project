@@ -82,8 +82,9 @@ def login():
 
 @app.route('/user', methods=["GET", "POST"])
 @login_required
+
 def user():
-    return render_template("user.html")
+    return render_template("user.html",)
     
 
 
@@ -104,6 +105,16 @@ def register2():
         db.session.commit()
         return redirect(url_for('login'))
     return render_template("register2.html", form=form)
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template("404.html"), 404
+
+
+@app.errorhandler(500)
+def page_not_found(e):
+    return render_template("500.html"), 404
+    
 
 
 if __name__ == "__main__":
