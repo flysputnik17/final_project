@@ -63,7 +63,7 @@ class LoginForm(FlaskForm):
     
 
 class NameForm(FlaskForm):
-    username = StringField("whatsyor name", validators=[DataRequired()])
+    username = StringField( validators=[DataRequired()])
     
 
 
