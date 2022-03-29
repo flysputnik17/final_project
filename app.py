@@ -1,10 +1,12 @@
 
+from tkinter.tix import Form
+from unicodedata import name
 from flask import Flask, redirect, render_template, request, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_required, login_user, logout_user, current_user
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
-from wtforms.validators import InputRequired, Length, ValidationError
+from wtforms.validators import InputRequired, Length, ValidationError,DataRequired
 from flask_bcrypt import Bcrypt
 
 
@@ -59,6 +61,9 @@ class LoginForm(FlaskForm):
         min=4, max=20)], render_kw={"placeholder": "Password"})
     submit = SubmitField("Login")
     
+
+class NameForm(FlaskForm):
+    username = StringField("whatsyor name", validators=[DataRequired()])
     
 
 
@@ -84,7 +89,12 @@ def login():
 @login_required
 
 def user():
-    return render_template("user.html",)
+    username = None
+    form = NameForm()
+    if form.validate_on_submit():
+        username=form.username.data
+        form.username.data= ' '
+    return render_template("user.html", username=username, form=form)
     
 
 
