@@ -63,17 +63,17 @@
           <div class="form_face">
           
                 {{ form.hidden_tag() }}
-              <div class="form_username ">
-                {{ form.username }}
-              </div>
-              <div>
-                {{ form.password }}
-              </div>
+                <div class="form_username ">
+                  <span class="input-group-text" id="addon-wrapping">@{{ form.username(class="form-control") }}</span>
+                </div>
+                <div class="form_password">
+                  <span class="input-group-text" id="addon-wrapping">#{{ form.password(class="form-control") }}</span>
+                </div>
               <button type="button" class="btn btn-outline-secondary">{{ form.submit }}</button>
 
           </div>
         </form>
-        <button ><a href="{{url_for('register2')}}" style="text-decoration: none;"> Dont have an account? Sign in</a></button>
+        <a href="{{url_for('register2')}}" class="btn btn-primary active" > Dont have an account? Sign in</a>
     </div>
     <div class="section-4">
         <footer>
@@ -90,7 +90,7 @@
                     <div class="col-sm-4 col-md-3 item">
                         <h3>Contact</h3>
                         <ul>
-                            <li><a href="#">PHONE   0542546513</a></li>
+                            <li><a href="https://wa.me/+972528303775">PHONE   0528303775</a></li>
                             <li><a href="#">EMAIL:PEFECT.NAIL@GMAIL.COM</a></li>
                             
                         </ul>

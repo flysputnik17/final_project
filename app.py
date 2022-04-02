@@ -64,6 +64,7 @@ class LoginForm(FlaskForm):
 
 class NameForm(FlaskForm):
     username = StringField( validators=[DataRequired()])
+    submit = SubmitField("Submit")
     
 
 
@@ -93,8 +94,8 @@ def user():
     form = NameForm()
     if form.validate_on_submit():
         username=form.username.data
-        form.username.data= ' '
-    return render_template("user.html", username=username, form=form)
+        form.username.data= ''
+    return render_template("user.html", username = username, form = form)
     
 
 
