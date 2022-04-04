@@ -372,3 +372,9 @@ hr .new1 {
   color: white;
   transform: rotateY(180deg);
 }
+
+.pricingTable .btn-outline-secondary {
+  margin: auto;
+  background-color: #82919f;
+  color: rgb(253, 253, 253);
+}

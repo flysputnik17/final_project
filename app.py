@@ -1,5 +1,6 @@
 
 
+from pickle import NONE
 from unicodedata import name
 from flask import Flask, redirect, render_template, request, url_for
 from flask_sqlalchemy import SQLAlchemy
