@@ -1,5 +1,6 @@
 
 
+import email
 from pickle import NONE
 from unicodedata import name
 from flask import Flask, redirect, render_template, request, url_for
@@ -38,13 +39,15 @@ class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(20), nullable=False, unique=True)
     password = db.Column(db.String(80), nullable=False)
-
+  
+    
 
 class RegisterForm(FlaskForm):
     username = StringField(validators=[InputRequired(), Length(
-        min=4, max=20)], render_kw={"placeholder": "Username"})
+        min=4, max=20), DataRequired()], render_kw={"placeholder": "Username"})
     password = PasswordField(validators=[InputRequired(), Length(
         min=4, max=20)], render_kw={"placeholder": "Password"})
+    
     submit = SubmitField("Register")
 
     def validate_username(self, username):
@@ -84,7 +87,7 @@ def login():
             if bcrypt.check_password_hash(user.password, form.password.data):
                 login_user(user)
                 return redirect(url_for('user'))
-    return render_template("login.html", form=form)
+    return render_template("login.html", form=form, )
 
 
 @app.route('/user', methods=["GET", "POST"])
