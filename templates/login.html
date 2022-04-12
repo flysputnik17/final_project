@@ -59,12 +59,12 @@
             <a href="https://www.facebook.com/perf.ect.naill"><img src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/></a>
             <a href="https://www.pinterest.com/pavel2012155/_saved/"><img src="https://img.icons8.com/color/48/000000/pinterest--v1.png"/></a>
         </div>
-        <form class="form" method="POST" action="">
+        <form class="form" method="POST" action="/user">
           <div class="form_face">
           
                 {{ form.hidden_tag() }}
                 <div class="form_username ">
-                  <span class="input-group-text" id="addon-wrapping">@{{ form.username(class="form-control") }}</span>
+                  <span class="input-group-text" id="inputname" username="username">@{{ form.username(class="form-control") }}</span>
                 </div>
                 <div class="form_password">
                   <span class="input-group-text" id="addon-wrapping">#{{ form.password(class="form-control") }}</span>

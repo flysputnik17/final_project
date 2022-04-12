@@ -94,7 +94,7 @@ def login():
 @login_required
 
 def user():
-    username = None
+    username = request.form['username']
     form = NameForm()
     if form.validate_on_submit():
         username=form.username.data
