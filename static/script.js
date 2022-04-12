@@ -1,38 +1,38 @@
-let navbar = (".navbar");
+let navbar = $(".navbar");
 
-(window).scroll(function(){
-  let oTop = (".section").offset().top-window.innerHeight;
-  if((window).scrollTop()>oTop){
+$(window).scroll(function(){
+  let oTop=$(".section-2").offset().top-window.innerHeight;
+  if($(window).scrollTop()>oTop){
     navbar.addClass("sticky");
   }else{
     navbar.removeClass("sticky");
   }
 });
 
+let nCount=function(selector){
+  $(selector).each(function(){
 
-let nCount = function(selector){
-
-  (selector).each(function(){
-    (this).animate({
-      Counter:(this).text()
+    $(this).animate({
+      Counter:$(this).text()
     },{
-      duration:4000,
-      easing:"swing",
-      step:function(value){
-        (this).text(Math.ceil(value));
-      }
+        duration:4000,
+        easing:"swing",
+        step:function(value){
+          $(this).text(Math.ceil(value));
+        }
     });
+
   });
 };
 
- let a =0;
-  (window).scroll(function(){
-  let oTop = (".numbers").offset().top-window.innerHeight;
-  if(a==0&&(window).scrollTop()>=oTop){
+let a=0;
+$(window).scroll(function(){
+  let oTop = $(".section-2").offset().top-window.innerHeight;
+  if(a==0 && $(window).scrollTop()>=oTop){
     a++;
     nCount(".rect>h1");
   }
-});
+})
 
 $("button").click(function(){
   alert("thank you for your order we will contact you for more diteiled information")
