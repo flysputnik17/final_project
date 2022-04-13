@@ -34,7 +34,7 @@ $(window).scroll(function(){
   }
 })
 
-$("button").click(function(){
-  alert("thank you for your order we will contact you for more diteiled information")
-});
+// $("button").click(function(){
+//   alert("thank you for your order we will contact you for more diteiled information")
+// });
 
