@@ -364,6 +364,8 @@ hr .new1 {
 .flip-card-front {
   background-color: #bbb;
   color: black;
+  
+  
 }
 
 /* Style the back side */
@@ -378,3 +380,4 @@ hr .new1 {
   background-color: #82919f;
   color: rgb(253, 253, 253);
 }
+
